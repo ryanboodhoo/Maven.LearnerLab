@@ -1,10 +1,11 @@
 public class Person {
     private final long id;
     private String name;
+    private static int counter = 0;
 
 
-    public Person(long id, String name) {
-        this.id = id;
+    public Person( String name) {
+        this.id = counter++;
         this.name = name;
     }
 

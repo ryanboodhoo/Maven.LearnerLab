@@ -4,18 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class People implements Iterable<Person> {
-    private List<Person> personList;
+class People implements Iterable<Person> {
 
-     public People() {
-        this.personList = new ArrayList<>();
-    }
+    private final List<Person> personList = new ArrayList<>();
 
-     public void add(Person person) {
+    public void add(Person person) {
         personList.add(person);
     }
 
-     public Person findById(long id) {
+
+    public Person findById(int id) {
         for (Person person : personList) {
             if (person.getId() == id) {
                 return person;
@@ -24,48 +22,37 @@ public class People implements Iterable<Person> {
         return null;
     }
 
-     public boolean contains(Person person) {
+
+    public boolean contains(Person person) {
         return personList.contains(person);
     }
 
-     public void remove(Person person) {
+    public void remove(Person person) {
         personList.remove(person);
     }
 
-     public void remove(long id) {
+    public void remove(long id) {
         personList.removeIf(person -> person.getId() == id);
+    }
+
+    public void removeAll() {
+        personList.clear();
+    }
+
+    public int count() {
+        return personList.size();
+    }
+
+    public Person[] toArray() {
+        return (Person[]) personList.toArray();
     }
 
     @Override
     public Iterator<Person> iterator() {
-        return null;
+        return personList.iterator();
     }
 
-    @Override
-    public void forEach(Consumer<? super Person> action) {
-        Iterable.super.forEach(action);
+    public List<Person> getPersonList() {
+        return personList;
     }
-
-    @Override
-    public Spliterator<Person> spliterator() {
-        return Iterable.super.spliterator();
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
