@@ -17,7 +17,7 @@ Deque: A double-ended queue in which you have the ability to add or remove items
 
 2. Implementations: Some realizations of these libraries:
 General purpose: The common ones like ArrayList for lists, HashSet for sets, and HashMap for maps.
-Legacy: Older collections like Vector and `Hashtable`, which you might still see around but are no longer in vogue for new code.
+Legacy: Older collections like Vector and Hashtable, which you might still see around but are no longer in vogue for new code.
 Special purpose: Collections intended for specific situations in which behavior or performance is singular.
 Concurrent: Collections meant to be used safely by multiple threads at the same time.
 Wrapper: Special versions that add extra functionality, such as making a collection synchronized for thread safety.
