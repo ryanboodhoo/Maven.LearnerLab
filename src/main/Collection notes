@@ -1,0 +1,55 @@
+Collections framework notes
+
+The Java Collections Framework is a set of tools that makes working with groups of objects—like numbers, words, or custom objects you create in Java—easier. It is best conceived as a toolkit filled with different boxes and organizers to store, manage, and access data in an efficient manner. Here's a beginner-friendly breakdown:
+
+Why Use the Collections Framework?
+1. Saves You Time: You don't have to write your own data structures (like lists or maps) because Java provides them for you.
+2. Improves Performance: Java's built-in data structures are optimized to run efficiently.
+3. Easier to Understand: Since everyone follows these common structures, it makes it easy to read and understand other people's code (and vice versa, for others to read yours).
+4. Reusable Code: The Collections Framework allows for code reusability and hence you don't need to have multiple versions of the same functionality.
+
+1. Collection Interfaces: These define the different types of collections you can use:
+Set: A collection with no duplicate elements (a bag of unique items).
+List: A set in which order matters, and you are allowed duplicates (like an ordered list of things).
+Map: A collection that stores key value pairs (similar to a dictionary where each word has a definition).
+Queue: A collection where elements are processed in the order they're added (like a line of people waiting).
+Deque: A double-ended queue in which you have the ability to add or remove items from both ends.
+
+2. Implementations: Some realizations of these libraries:
+General purpose: The common ones like `ArrayList` for lists, `HashSet` for sets, and `HashMap` for maps.
+Legacy: Older collections like `Vector` and `Hashtable`, which you might still see around but are no longer in vogue for new code.
+Special purpose: Collections intended for specific situations in which behavior or performance is singular.
+Concurrent: Collections meant to be used safely by multiple threads at the same time.
+Wrapper: Special versions that add extra functionality, such as making a collection synchronized for thread safety.
+Convenience: Light, easier to use collections for short work.
+Abstract: Partial implementations to help create one's own custom collections.
+
+3. Algorithms: Static methods available in the `Collections` class for performing common operations on collections, such as sorting or searching.
+
+4. Array Utilities: tools to work with arrays—basic storage of items—and convert between arrays and collections.
+
+Collection Interfaces in More Detail
+java.util.Collection: The topmost interface that other collections extend.
+Set, List, Queue, Deque: Collections of various types for different purposes.
+Map: Not technically a collection, but it is often lumped in with collections since it does store data in a structured manner.
+
+Key Terms
+Unmodifiable: A collection that you cannot change—no addition, removal, or clearing of items.
+Immutable: A collection that can't be changed in any way once it's created.
+Fixed size: A list where the size is fixed and cannot change, although the contents may.
+Random Access: A list that allows for efficient access to elements through their index.
+
+Collection Types You’ll Use Often
+Set: Contains only unique elements (no duplicates).
+Examples: `HashSet`, `TreeSet`, `LinkedHashSet`
+List: Ordered collection where you can have duplicate elements.
+Examples: `ArrayList`, `LinkedList`
+Queue/Deque: Collections used when you need to add/remove elements in a specific order.
+Examples: `ArrayDeque`, `LinkedList`
+Map: Associates each key with a value. Useful for lookup tables. Examples: `HashMap`, `TreeMap`, `LinkedHashMap`
+
+Concurrent Collections (Advanced)
+
+Java has specialized concurrent collections, such as `BlockingQueue` and `ConcurrentMap`, that enable safe access from multiple threads for programs handling multiple tasks at once (multithreading).
+
+Design Goals The framework was designed to be: 1. **Lightweight**: Avoids clutter by focusing on essentials. 2. **Efficient**: Makes your code run quickly. 3. **Easy to Interoperate with Arrays**: Provides convenience in interoperating data transfer between arrays and collections. In general, the Java Collections Framework provides powerful components for managing and manipulating collections of objects so that you don't need to build these data structures from scratch. It's really part of Java, keeping code cleaner, more efficient, and easier to handle.
