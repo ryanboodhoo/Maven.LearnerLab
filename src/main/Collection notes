@@ -16,15 +16,15 @@ Queue: A collection where elements are processed in the order they're added (lik
 Deque: A double-ended queue in which you have the ability to add or remove items from both ends.
 
 2. Implementations: Some realizations of these libraries:
-General purpose: The common ones like `ArrayList` for lists, `HashSet` for sets, and `HashMap` for maps.
-Legacy: Older collections like `Vector` and `Hashtable`, which you might still see around but are no longer in vogue for new code.
+General purpose: The common ones like ArrayList for lists, HashSet for sets, and HashMap for maps.
+Legacy: Older collections like Vector and `Hashtable`, which you might still see around but are no longer in vogue for new code.
 Special purpose: Collections intended for specific situations in which behavior or performance is singular.
 Concurrent: Collections meant to be used safely by multiple threads at the same time.
 Wrapper: Special versions that add extra functionality, such as making a collection synchronized for thread safety.
 Convenience: Light, easier to use collections for short work.
 Abstract: Partial implementations to help create one's own custom collections.
 
-3. Algorithms: Static methods available in the `Collections` class for performing common operations on collections, such as sorting or searching.
+3. Algorithms: Static methods available in the Collections class for performing common operations on collections, such as sorting or searching.
 
 4. Array Utilities: tools to work with arrays—basic storage of items—and convert between arrays and collections.
 
@@ -41,15 +41,15 @@ Random Access: A list that allows for efficient access to elements through their
 
 Collection Types You’ll Use Often
 Set: Contains only unique elements (no duplicates).
-Examples: `HashSet`, `TreeSet`, `LinkedHashSet`
+Examples: HashSet, TreeSet,LinkedHashSet
 List: Ordered collection where you can have duplicate elements.
-Examples: `ArrayList`, `LinkedList`
+Examples: ArrayList,LinkedList
 Queue/Deque: Collections used when you need to add/remove elements in a specific order.
-Examples: `ArrayDeque`, `LinkedList`
-Map: Associates each key with a value. Useful for lookup tables. Examples: `HashMap`, `TreeMap`, `LinkedHashMap`
+Examples: ArrayDeque,LinkedList
+Map: Associates each key with a value. Useful for lookup tables. Examples: HashMap, TreeMap,LinkedHashMap
 
 Concurrent Collections (Advanced)
 
-Java has specialized concurrent collections, such as `BlockingQueue` and `ConcurrentMap`, that enable safe access from multiple threads for programs handling multiple tasks at once (multithreading).
+Java has specialized concurrent collections, such as BlockingQueue and ConcurrentMap, that enable safe access from multiple threads for programs handling multiple tasks at once (multithreading).
 
-Design Goals The framework was designed to be: 1. **Lightweight**: Avoids clutter by focusing on essentials. 2. **Efficient**: Makes your code run quickly. 3. **Easy to Interoperate with Arrays**: Provides convenience in interoperating data transfer between arrays and collections. In general, the Java Collections Framework provides powerful components for managing and manipulating collections of objects so that you don't need to build these data structures from scratch. It's really part of Java, keeping code cleaner, more efficient, and easier to handle.
+Design Goals The framework was designed to be: 1. Lightweight: Avoids clutter by focusing on essentials. 2. Efficient: Makes your code run quickly. 3. Easy to Interoperate with Arrays: Provides convenience in interoperating data transfer between arrays and collections. In general, the Java Collections Framework provides powerful components for managing and manipulating collections of objects so that you don't need to build these data structures from scratch. It's really part of Java, keeping code cleaner, more efficient, and easier to handle.
