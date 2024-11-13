@@ -8,7 +8,7 @@ class StudentTest {
     @Test
     void testImplementation(){
 
-        Student student = new Student("Bob");
+        Student student = new Student(1L, "Bob");
 
         Assertions.assertEquals(true, student instanceof Learner);
     }
@@ -17,7 +17,7 @@ class StudentTest {
 
     @Test
     void testInheritance () {
-        Student student = new Student("Bob");
+        Student student = new Student(1L, "Bob");
 
         Assertions.assertEquals(true, student instanceof Person);
 
@@ -25,7 +25,7 @@ class StudentTest {
 
     @Test
     void learn () {
-        Student student = new Student("Bob");
+        Student student = new Student(1L, "Bob");
 
         student.learn(8);
 

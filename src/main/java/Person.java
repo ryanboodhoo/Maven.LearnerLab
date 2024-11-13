@@ -1,14 +1,11 @@
 public class Person {
-    private final long id;
+    private final Long id;
     private String name;
-    private static int counter = 0;
 
-
-    public Person( String name) {
-        this.id = counter++;
+    public Person(Long id, String name) {
+        this.id = id;
         this.name = name;
     }
-
 
     public long getId() {
         return id;

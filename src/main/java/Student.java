@@ -1,25 +1,27 @@
-import java.util.function.Consumer;
+public class Student extends Person implements Learner{
 
-public  class Student extends Person implements Learner{
 
         private double totalStudyTime;
 
-        public Student(String name) {
-                super( name);
+        public Student(Long id, String name) {
+                super(id, name);
         }
 
 
         @Override
         public void learn(double numberOfHours) {
+                //increments total study time
+                //by specified number of hours
+
                 totalStudyTime += numberOfHours;
+
         }
+
+
 
         @Override
         public double getTotalStudyTime() {
                 return totalStudyTime;
         }
 
-        public void setTotalStudyTime(double totalStudyTime) {
-                this.totalStudyTime = totalStudyTime;
-        }
 }

@@ -11,7 +11,7 @@ class PersonTest {
 
     @BeforeEach
     public void setUp() {
-        person = new Person(initialName);
+        person = new Person((long) id, initialName);
     }
 
     @Test

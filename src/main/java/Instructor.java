@@ -1,9 +1,10 @@
-import java.text.Format;
+public class Instructor extends Person implements Teacher {
 
-public class Instructor extends Person implements Teacher{
-    public Instructor(long id, String name) {
-        super( name);
+
+    public Instructor(Long id, String name) {
+        super(id, name);
     }
+
 
     @Override
     public void teach(Learner learner, double numberOfHours) {
@@ -12,13 +13,13 @@ public class Instructor extends Person implements Teacher{
 
     @Override
     public void lecture(Learner[] learners, double numberOfHours) {
-        for (Learner i: learners){
-            i.learn(numberOfHours);
-        }
         double numberOfHoursPerLearner = numberOfHours / learners.length;
-        System.out.println(numberOfHoursPerLearner);
+        for (Learner i: learners){
+            i.learn(numberOfHoursPerLearner);
+        }
+
+
+
+
     }
-
-
-
 }

@@ -1,11 +1,4 @@
 public interface Learner {
-
-
-    public void learn(double numberOfHours);
-
-    public double getTotalStudyTime();
-
-
-
-
+    void learn (double numberOfHours);
+    double getTotalStudyTime();
 }

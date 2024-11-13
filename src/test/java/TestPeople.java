@@ -1,48 +1,63 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestPeople {
 
-    private People people;
-    private Person person1;
-    private Person person2;
+
+    People people;
 
     @BeforeEach
-    public void setUp() {
-        people = new People();
-        person1 = new Person("Alice");
-        person2 = new Person("Bob");
+    public void setUpBeforeEach() {
+        people  = new People();
     }
 
     @Test
-    public void testAdd() {
-        people.add(person1);
+    public void addTest() {
+        int expected =1;
 
-        assertTrue("PersonList should contain person1 after adding", people.getPersonList().contains(person1));
-     }
+        people.add(new Person(45L, "Ryan"));
 
-    @Test
-    public void testRemove() {
-        people.add(person1);
-        people.add(person2);
+        Assertions.assertEquals(expected, people.ArraylistSize());
 
-        people.remove(person1);
-
-        assertFalse("PersonList should not contain person1 after removal", people.getPersonList().contains(person1));
-     }
-
-    @Test
-    public void testFindById() {
-        people.add(person1);
-        people.add(person2);
-
-        assertEquals(person1, people.findById(1), "findById should return person1 for id 1");
-        assertEquals(person2, people.findById(2), "findById should return person2 for id 2");
-        assertNull(people.findById(3), "findById should return null for a non-existent id");
     }
+
+    @Test
+    public void RemoveNameTest() {
+        int expected = 0;
+
+        Person person = new Person(54L, "Shawn");
+
+        people.add(person);
+
+        people.removePersonObjectToPersonToPersonList(person);
+
+        Assertions.assertEquals(expected, people.ArraylistSize());
+
+
+    }
+
+    @Test
+    public void testFindId(){
+
+        People people = new People();
+
+        List<Person> personList = new ArrayList<>();
+
+        personList.add(new Person(23L, "Shawn"));
+
+        people.setPersonList(personList);
+
+        Person expected = personList.get(0);
+
+        Person actual = people.findPersonById(23L);
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+
 }

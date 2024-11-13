@@ -1,58 +1,60 @@
-import java.util.*;
-
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-import java.util.function.Consumer;
 
-class People implements Iterable<Person> {
+public class People <E extends Person> implements Iterable<E> {
 
-    private final List<Person> personList = new ArrayList<>();
+    private List<E> personList = new ArrayList<E>();
 
-    public void add(Person person) {
-        personList.add(person);
+    public List<E> getPersonList() {
+        return personList;
     }
 
-
-    public Person findById(int id) {
-        for (Person person : personList) {
-            if (person.getId() == id) {
-                return person;
-            }
-        }
-        return null;
+    public void setPersonList(List<E> personList) {
+        this.personList = personList;
     }
 
+    public void add(E people) {
+        personList.add(people);
+    }
 
-    public boolean contains(Person person) {
+    public boolean personListContainsPersonObject(E person) {
         return personList.contains(person);
     }
 
-    public void remove(Person person) {
+    public void removePersonObjectToPersonToPersonList(E person) {
         personList.remove(person);
+
     }
 
-    public void remove(long id) {
-        personList.removeIf(person -> person.getId() == id);
+    public void removeId(long id){
+        for(Person i : personList){
+            if(i.getId() == id){
+                personList.remove((E) i);
+            }
+        }
     }
 
-    public void removeAll() {
+    public void RemoveAll(){
         personList.clear();
     }
 
-    public int count() {
+    public int ArraylistSize(){
         return personList.size();
     }
 
-    public Person[] toArray() {
-        return (Person[]) personList.toArray();
+
+    public E[] toArray(){
+
+        return (E[]) personList.toArray(new Person[0]);
     }
 
     @Override
-    public Iterator<Person> iterator() {
+    public Iterator<E> iterator() {
         return personList.iterator();
     }
 
-    public List<Person> getPersonList() {
-        return personList;
+    public Person findPersonById(long l) {
+        return null;
     }
 }
